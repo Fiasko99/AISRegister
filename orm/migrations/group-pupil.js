@@ -1,0 +1,98 @@
+const { db } = require('../sequelize')
+
+module.exports = async () => {
+    const groupsPupils = [
+        { group_id: 1, pupil_id: 1 },
+        { group_id: 2, pupil_id: 1 },
+        { group_id: 3, pupil_id: 1 },
+        { group_id: 4, pupil_id: 1 },
+        { group_id: 5, pupil_id: 1 },
+        { group_id: 6, pupil_id: 1 },
+        { group_id: 7, pupil_id: 1 },
+        { group_id: 8, pupil_id: 1 },
+        
+        { group_id: 1, pupil_id: 2 },
+        { group_id: 2, pupil_id: 2 },
+        { group_id: 3, pupil_id: 2 },
+        { group_id: 4, pupil_id: 2 },
+        { group_id: 5, pupil_id: 2 },
+        { group_id: 6, pupil_id: 2 },
+        { group_id: 7, pupil_id: 2 },
+        { group_id: 8, pupil_id: 2 },
+        
+        { group_id: 1, pupil_id: 3 },
+        { group_id: 2, pupil_id: 3 },
+        { group_id: 3, pupil_id: 3 },
+        { group_id: 4, pupil_id: 3 },
+        { group_id: 5, pupil_id: 3 },
+        { group_id: 6, pupil_id: 3 },
+        { group_id: 7, pupil_id: 3 },
+        { group_id: 8, pupil_id: 3 },
+        
+        { group_id: 1, pupil_id: 4 },
+        { group_id: 2, pupil_id: 4 },
+        { group_id: 3, pupil_id: 4 },
+        { group_id: 4, pupil_id: 4 },
+        { group_id: 5, pupil_id: 4 },
+        { group_id: 6, pupil_id: 4 },
+        { group_id: 7, pupil_id: 4 },
+        { group_id: 8, pupil_id: 4 },
+        
+        { group_id: 1, pupil_id: 5 },
+        { group_id: 2, pupil_id: 5 },
+        { group_id: 3, pupil_id: 5 },
+        { group_id: 4, pupil_id: 5 },
+        { group_id: 5, pupil_id: 5 },
+        { group_id: 6, pupil_id: 5 },
+        { group_id: 7, pupil_id: 5 },
+        { group_id: 8, pupil_id: 5 },
+        
+        { group_id: 1, pupil_id: 6 },
+        { group_id: 2, pupil_id: 6 },
+        { group_id: 3, pupil_id: 6 },
+        { group_id: 4, pupil_id: 6 },
+        { group_id: 5, pupil_id: 6 },
+        { group_id: 6, pupil_id: 6 },
+        { group_id: 7, pupil_id: 6 },
+        { group_id: 8, pupil_id: 6 },
+        
+        { group_id: 1, pupil_id: 7 },
+        { group_id: 2, pupil_id: 7 },
+        { group_id: 3, pupil_id: 7 },
+        { group_id: 4, pupil_id: 7 },
+        { group_id: 5, pupil_id: 7 },
+        { group_id: 6, pupil_id: 7 },
+        { group_id: 7, pupil_id: 7 },
+        { group_id: 8, pupil_id: 7 },
+        
+        { group_id: 1, pupil_id: 8 },
+        { group_id: 2, pupil_id: 8 },
+        { group_id: 3, pupil_id: 8 },
+        { group_id: 4, pupil_id: 8 },
+        { group_id: 5, pupil_id: 8 },
+        { group_id: 6, pupil_id: 8 },
+        { group_id: 7, pupil_id: 8 },
+        { group_id: 8, pupil_id: 8 },
+        
+        { group_id: 1, pupil_id: 9 },
+        { group_id: 2, pupil_id: 9 },
+        { group_id: 3, pupil_id: 9 },
+        { group_id: 4, pupil_id: 9 },
+        { group_id: 5, pupil_id: 9 },
+        { group_id: 6, pupil_id: 9 },
+        { group_id: 7, pupil_id: 9 },
+        { group_id: 8, pupil_id: 9 },
+        
+        { group_id: 1, pupil_id: 10 },
+        { group_id: 2, pupil_id: 10 },
+        { group_id: 3, pupil_id: 10 },
+        { group_id: 4, pupil_id: 10 },
+        { group_id: 5, pupil_id: 10 },
+        { group_id: 6, pupil_id: 10 },
+        { group_id: 7, pupil_id: 10 },
+        { group_id: 8, pupil_id: 10 },
+    ]
+    for (const groupPupil of groupsPupils) {
+        await db.GroupsPupils.create({ ...groupPupil })
+    }
+};

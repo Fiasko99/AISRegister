@@ -1,0 +1,88 @@
+const { db } = require('../sequelize')
+
+module.exports = async () => {
+    const attendances = [
+        { group_id: 1, month_name: 'Сентябрь' },
+        { group_id: 1, month_name: 'Октябрь' },
+        { group_id: 1, month_name: 'Ноябрь' },
+        { group_id: 1, month_name: 'Декабрь' },
+        { group_id: 1, month_name: 'Январь' },
+        { group_id: 1, month_name: 'Февраль' },
+        { group_id: 1, month_name: 'Март' },
+        { group_id: 1, month_name: 'Апрель' },
+        { group_id: 1, month_name: 'Май' },
+        
+        { group_id: 2, month_name: 'Сентябрь' },
+        { group_id: 2, month_name: 'Октябрь' },
+        { group_id: 2, month_name: 'Ноябрь' },
+        { group_id: 2, month_name: 'Декабрь' },
+        { group_id: 2, month_name: 'Январь' },
+        { group_id: 2, month_name: 'Февраль' },
+        { group_id: 2, month_name: 'Март' },
+        { group_id: 2, month_name: 'Апрель' },
+        { group_id: 2, month_name: 'Май' },
+        
+        { group_id: 3, month_name: 'Сентябрь' },
+        { group_id: 3, month_name: 'Октябрь' },
+        { group_id: 3, month_name: 'Ноябрь' },
+        { group_id: 3, month_name: 'Декабрь' },
+        { group_id: 3, month_name: 'Январь' },
+        { group_id: 3, month_name: 'Февраль' },
+        { group_id: 3, month_name: 'Март' },
+        { group_id: 3, month_name: 'Апрель' },
+        { group_id: 3, month_name: 'Май' },
+        
+        { group_id: 4, month_name: 'Сентябрь' },
+        { group_id: 4, month_name: 'Октябрь' },
+        { group_id: 4, month_name: 'Ноябрь' },
+        { group_id: 4, month_name: 'Декабрь' },
+        { group_id: 4, month_name: 'Январь' },
+        { group_id: 4, month_name: 'Февраль' },
+        { group_id: 4, month_name: 'Март' },
+        { group_id: 4, month_name: 'Апрель' },
+        { group_id: 4, month_name: 'Май' },
+        
+        { group_id: 5, month_name: 'Сентябрь' },
+        { group_id: 5, month_name: 'Октябрь' },
+        { group_id: 5, month_name: 'Ноябрь' },
+        { group_id: 5, month_name: 'Декабрь' },
+        { group_id: 5, month_name: 'Январь' },
+        { group_id: 5, month_name: 'Февраль' },
+        { group_id: 5, month_name: 'Март' },
+        { group_id: 5, month_name: 'Апрель' },
+        { group_id: 5, month_name: 'Май' },
+        
+        { group_id: 6, month_name: 'Сентябрь' },
+        { group_id: 6, month_name: 'Октябрь' },
+        { group_id: 6, month_name: 'Ноябрь' },
+        { group_id: 6, month_name: 'Декабрь' },
+        { group_id: 6, month_name: 'Январь' },
+        { group_id: 6, month_name: 'Февраль' },
+        { group_id: 6, month_name: 'Март' },
+        { group_id: 6, month_name: 'Апрель' },
+        { group_id: 6, month_name: 'Май' },
+        
+        { group_id: 7, month_name: 'Сентябрь' },
+        { group_id: 7, month_name: 'Октябрь' },
+        { group_id: 7, month_name: 'Ноябрь' },
+        { group_id: 7, month_name: 'Декабрь' },
+        { group_id: 7, month_name: 'Январь' },
+        { group_id: 7, month_name: 'Февраль' },
+        { group_id: 7, month_name: 'Март' },
+        { group_id: 7, month_name: 'Апрель' },
+        { group_id: 7, month_name: 'Май' },
+        
+        { group_id: 8, month_name: 'Сентябрь' },
+        { group_id: 8, month_name: 'Октябрь' },
+        { group_id: 8, month_name: 'Ноябрь' },
+        { group_id: 8, month_name: 'Декабрь' },
+        { group_id: 8, month_name: 'Январь' },
+        { group_id: 8, month_name: 'Февраль' },
+        { group_id: 8, month_name: 'Март' },
+        { group_id: 8, month_name: 'Апрель' },
+        { group_id: 8, month_name: 'Май' },
+    ]
+    for (const attendance of attendances) {
+        await db.Attendances.create({ ...attendance })
+    }
+};
