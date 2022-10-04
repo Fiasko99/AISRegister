@@ -7,6 +7,7 @@
 - Запустить команду `npm i`
 - Создать файл .env и заполнить поля
 | name | type |
+|----------|:-------------:|
 | DB_NAME | string |
 | DB_USER | string |
 | DB_PASSWORD | string |
