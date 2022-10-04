@@ -1,21 +1,25 @@
 # Проект Реестр дополнительного образования
 
-Самостоятельный проект. Используются NodeJs(Express) + Sequelize(pg)
+Самостоятельный проект. Используется NodeJs(Express) + Sequelize(pg).
+
+Описание: реестр дополнительного образования для контроля посещаемости учеников и контроля оплат занятий. 
+Из заполняемых данных формируются ежемесячные отчеты.
 
 # Как запустить:
 
 - Запустить команду `npm i` в командной строке проекта
 - Создать файл .env и заполнить поля
 
-| name | type |
-|----|----|
-| DB_NAME | string |
-| DB_USER | string |
-| DB_PASSWORD | string |
-| DB_HOST | string |
-| DB_DIALECT | string |
-| PORT | integer |
-| CLIENT_URL | string (url) |
-| JWT_ACCESS_SECRET | string |
-| JWT_REFRESH_SECRET | string |
+| name | type | mean |
+|----|----|----|
+| DB_NAME | string | Наименование базы данных |
+| DB_USER | string | Имя пользователя |
+| DB_PASSWORD | string | Пароль бд |
+| DB_HOST | string | Хост бд |
+| DB_DIALECT | string | СУБД (например mysql) |
+| PORT | integer | Порт сервера |
+| CLIENT_URL | string (url) | Ссылка на клиентское приложение (для dev режима) |
+| JWT_ACCESS_SECRET | string | Секретный ключ для создания токена доступа |
+| JWT_REFRESH_SECRET | string | Секретный ключ для создания refresh токена |
+- Создайте базу данных с указанным в поле именем
 - Запустить команду `npm start` в командной строке проекта
